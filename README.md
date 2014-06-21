@@ -1,6 +1,6 @@
 # Reminders
 
-#### Because most mail group's calendars suck.
+*Because some mail group's calendars suck.*
 
 Reminder is a script that reads events and dates from a flat text file and sends an email with today events.
 
@@ -10,13 +10,12 @@ I use this script to send birthday reminders to my school's class mailing list. 
 
 See requirements.txt.  Reminders has been tested on Python 2.7.5.
 
-Reminders expects a [MailGun](http://www.mailgun.com/) account to deliver mail.  (You can get a free account for less than 10,000 mails per month.)
+Reminders expects a [MailGun](http://www.mailgun.com/) account to deliver mail.  (You can get that allows you to send up to 10,000 mails per month for free.)
 
 ## Instalation
 
 The recommended method for installing this script is to create a `virtualenv`, install the requirements there via `pip`, and run the script periodically via a crontab job.
 
-To set the crontab job, use `crontab -e` and specify the python path to your virtualenv's Python binary.  
 
 	$ mkvirtualenv reminders
 	$ pip install -r requirements.txt
@@ -25,11 +24,14 @@ To set the crontab job, use `crontab -e` and specify the python path to your vir
 	$ cp settings-sample.py settings.py
 	$ cp sample-data data
 
+To set the crontab job, use `crontab -e` and specify the python path to your virtualenv's Python binary.  
+
 	(reminders)$ which python
 	/home/youruser/.virtualenvs/reminders/bin/python
 
 	(reminders) $ crontab -e
 	00 07 * * *      /home/youruser/.virtualenvs/reminders/bin/python /home/youruser/reminders/main.py
+
 
 ## Configuration file
 
@@ -56,10 +58,11 @@ The data file format is pretty straightforward.
 
 * Comments lines begin with `#`.  
 * Each line is an event in the form
+
 	[date]|[event name]|[comment]
 
 * The event's date must be specified in ISO format (i.e., YYYY-MM-DD).
-* A vertical bar (**|**) is used as field separator.
+* The vertical bar `|` char is used as field separator.
 * Comments are optional.
 
 ### Example
