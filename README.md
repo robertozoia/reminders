@@ -6,7 +6,7 @@ Reminder is a script that reads events and dates from a flat text file and sends
 
 ## Requirements
 
-See requirements.txt.  Reminders has been tested on Python 2.7.5. Reminders expects a [MailGun](http://www.mailgun.com/) account to deliver mail.  (You can get that allows you to send up to 10,000 mails per month for free.)
+See requirements.txt.  Reminders has been tested on Python 2.7.5. Reminders expects a [MailGun](http://www.mailgun.com/) account to deliver mail.  (Free MailGun accounts allow you to send up to 10,000 emails per month.)
 
 ## Instalation
 
@@ -53,9 +53,7 @@ To set the crontab job, use `crontab -e` and specify the python path to your vir
 The data file format is pretty straightforward.  
 
 * Comments lines begin with `#`.  
-* Each line is an event in the form
-
-	[date]|[event name]|[comment]
+* Each line is an event in the form `[date]|[event name]|[comment]`.
 
 * The event's date must be specified in ISO format (i.e., YYYY-MM-DD).
 * The vertical bar `|` char is used as field separator.
