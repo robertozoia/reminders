@@ -2,15 +2,11 @@
 
 *Because some mail group's calendars suck.*
 
-Reminder is a script that reads events and dates from a flat text file and sends an email with today events.
-
-I use this script to send birthday reminders to my school's class mailing list.  I've tried several 
+Reminder is a script that reads events and dates from a flat text file and sends an email with today events. I use this script to send birthday reminders to my school's class mailing list. 
 
 ## Requirements
 
-See requirements.txt.  Reminders has been tested on Python 2.7.5.
-
-Reminders expects a [MailGun](http://www.mailgun.com/) account to deliver mail.  (You can get that allows you to send up to 10,000 mails per month for free.)
+See requirements.txt.  Reminders has been tested on Python 2.7.5. Reminders expects a [MailGun](http://www.mailgun.com/) account to deliver mail.  (You can get that allows you to send up to 10,000 mails per month for free.)
 
 ## Instalation
 
@@ -88,6 +84,10 @@ When the templates are rendered, two variables are exposed:
 * `events`, a list of events.  Each event is a tuple in the form (date, event name, comment).
 * `today`, today's date.
 
+
+
+-----------
+Happy coding.
 
 
 
