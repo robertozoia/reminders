@@ -2,7 +2,7 @@
 
 
 """
-Recordatorios
+Reminders
 
 Reads events from flat text file.
 Sends mails for today events.
