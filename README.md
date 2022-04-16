@@ -1,3 +1,6 @@
+Note: This code is no longer being maintaned.
+
+
 # Reminders
 
 *Because some mail group's calendars suck.*
